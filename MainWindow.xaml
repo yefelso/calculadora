@@ -1,46 +1,31 @@
-﻿<Window x:Class="calculadora.MainWindow"
+﻿<Window x:Class="calculadora1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:calculadora"
+        xmlns:local="clr-namespace:calculadora1"
         mc:Ignorable="d"
-        Title="Calculadora" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="400">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <TextBox  Name="cuadrodetexto" HorizontalAlignment="Center" Height="30" Margin="0,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Height="24" Margin="10,143,0,0" VerticalAlignment="Top" Width="71" Click="Buttonborrar"/>
+        <Button Content="2" HorizontalAlignment="Left" Height="24" Margin="104,199,0,0" VerticalAlignment="Top" Width="72" Click="Button2"/>
+        <Button Content="3" HorizontalAlignment="Left" Height="24" Margin="200,199,0,0" VerticalAlignment="Top" Width="71" Click="Button3"/>
+        <Button Content="5" HorizontalAlignment="Left" Height="24" Margin="104,256,0,0" VerticalAlignment="Top" Width="71" Click="Button5"/>
+        <Button Content="7" HorizontalAlignment="Left" Height="24" Margin="10,308,0,0" VerticalAlignment="Top" Width="71" Click="Button7"/>
+        <Button Content="1" HorizontalAlignment="Left" Height="24" Margin="10,199,0,0" VerticalAlignment="Top" Width="71" Click="Button1"/>
+        <Button Content="8" HorizontalAlignment="Left" Height="24" Margin="104,308,0,0" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.521,1.752" Click="Button8"/>
+        <Button Content="6" HorizontalAlignment="Left" Height="24" Margin="200,256,0,0" VerticalAlignment="Top" Width="71" Click="Button6"/>
+        <Button Content="9" HorizontalAlignment="Left" Height="24" Margin="200,308,0,0" VerticalAlignment="Top" Width="71" Click="Button9"/>
+        <Button Content="x" HorizontalAlignment="Left" Height="24" Margin="299,308,0,0" VerticalAlignment="Top" Width="71" Click="Buttonmultiplicar"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="24" Margin="299,256,0,0" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.595,1.929" Click="Buttonsumar"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="24" Margin="299,199,0,0" VerticalAlignment="Top" Width="71" RenderTransformOrigin="1.144,0.981" Click="Buttonrestar"/>
+        <Button Content="4" HorizontalAlignment="Left" Height="24" Margin="10,256,0,0" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.616,2.022" Click="Button4"/>
+        <Button Content="/" HorizontalAlignment="Left" Height="24" Margin="298,359,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="1.479,5.252" Click="Buttondividir"/>
+        <Button Content="0" HorizontalAlignment="Left" Height="24" Margin="10,359,0,0" VerticalAlignment="Top" Width="71" Click="Button0"/>
+        <Label Content="SENATI" HorizontalAlignment="Center" Height="32" Margin="0,28,0,0" VerticalAlignment="Top" Width="50"/>
+        <Label Content="YEFELSON" HorizontalAlignment="Center" Height="27" Margin="0,447,0,0" VerticalAlignment="Top" Width="72"/>
+        <Button Content="=" HorizontalAlignment="Left" Height="24" Margin="200,359,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="1.479,5.252" Click="Buttonigual"/>
 
-        <TextBox x:Name="displayTextBox" Grid.Row="0" HorizontalAlignment="Center" TextAlignment="Right" FontSize="30" Margin="0,10,0,10" Width="738"/>
-
-        <Grid Grid.Row="1" Margin="10,57,10,10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Button Content="7" Click="NumberButton_Click" Tag="7" Margin="22,176,42,69"/>
-            <Button Content="8" Click="NumberButton_Click" Tag="8" Margin="27,176,27,71" Grid.Column="1"/>
-            <Button Content="9" Click="NumberButton_Click" Tag="9" Margin="34,176,27,71" Grid.Column="2"/>
-            <Button Content="/" Click="OperationButton_Click" Tag="/" Margin="28,247,29,6" Grid.Column="3"/>
-
-            <Button Content="4" Click="NumberButton_Click" Tag="4" Margin="22,106,42,139"/>
-            <Button Content="5" Click="NumberButton_Click" Tag="5" Height="60" VerticalAlignment="Top" Margin="27,106,27,0" Grid.Column="1"/>
-            <Button Content="6" Click="NumberButton_Click" Tag="6" Margin="34,106,27,139" Grid.Column="2"/>
-            <Button Content="*" Click="OperationButton_Click" Tag="*" Margin="28,176,29,0" Height="58" VerticalAlignment="Top" Grid.Column="3"/>
-
-            <Button Content="1" Click="NumberButton_Click" Tag="1" Margin="22,36,42,207"/>
-            <Button Content="2" Click="NumberButton_Click" Tag="2" Margin="27,36,27,208" Grid.Column="1"/>
-            <Button Content="3" Click="NumberButton_Click" Tag="3" Height="61" VerticalAlignment="Top" Margin="34,36,27,0" Grid.Column="2"/>
-            <Button Content="-" Click="OperationButton_Click" Tag="-" Grid.Column="3" Margin="28,36,29,208"/>
-
-            <Button Content="0" Click="NumberButton_Click" Tag="0" Margin="22,247,42,0"/>
-            <Button Content="C" Click="ClearButton_Click" Margin="18,-30,38,285"/>
-            <Button Content="=" Click="EqualsButton_Click" Margin="34,247,27,0" Grid.Column="2"/>
-            <Button Content="+" Click="OperationButton_Click" Tag="+" Height="61" VerticalAlignment="Top" Margin="28,105,29,0" Grid.Column="3"/>
-        </Grid>
     </Grid>
 </Window>
